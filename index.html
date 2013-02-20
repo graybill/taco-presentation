@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Your deck.js Presentation</title>
+	<title>Tacodelphia -- Project Development</title>
 	
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="core/deck.core.css">
@@ -19,78 +19,263 @@
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/web-2.0.css">
+	<link rel="stylesheet" href="themes/style/swiss.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+	<link rel="stylesheet" href="public/tacodelphia.css" />
 	
 	<!-- Required Modernizr file -->
 	<script src="modernizr.custom.js"></script>
 </head>
 <body class="deck-container">
 
-<!-- Begin slides. Just make elements with a class of slide. -->
+	<img src="public/background.png" class="stretch" />
 
-<section class="slide">
-	<h1>Test</h1>
-</section>
+	<section class="slide title" id="title-slide">
+		<h1>
+			TACODELPHIA:
+			<img src="public/stars.png" />
+			<img src="public/taco-mascot.png" />
+		</h1>
+		<!-- <p>
+			Presentation by Linus Graybill
+			</br>
+			February 20, 2013
+		</p> -->
+	</section>
 
-<section class="slide">
-	<h1>Content</h1>
-</section>
+	<section class="slide">
+		<h2>Here Was My Problem</h2>
+		<ul>
+			<li>I'm from the Southwest and love tacos</li>
+			<li>I love Philly, but don't love the lack of tacos</li>
+			<li>I want to be able to get tacos any time in Philly</li>
+			<li>I know others who feel the same way</li>
+		</ul>
+	</section>
 
-<section class="slide">
-	<h1>Here</h1>
-</section>
+	<section class="slide">
+		<h2>The Solution I Envisioned</h2>
+		<ul>
+			<li>Mobile without being a standalone app</li>
+			<li>Curated content</li>
+			<li>Location-aware</li>
+			<li>Funny</li>
+			<li>The focus should be a map</li>
+		</ul>
+	</section>
 
-<!-- End slides. -->
+	<section class="slide" id="content-creation">
+		<h2>Creating the Content</h2>
+		<ul>
+			<li>Searching Yelp and MenuPages pages for "taco"</li>
+			<li>Philadelphia food blogs searched for "taco"</li>
+			<li>Talking to people</li>
+			<li>Riding around the city</li>
+		</ul>
+	</section>
+
+	<section class="slide" id="technical">
+		<h2>The Technical Side</h2>
+		<ul>
+			<li>Built on Rails and deployed to Heroku</li>
+			<li>Twitter Bootstrap framework</li>	
+     	<li>Geospatial querying  (originally built this with MongoDB, replaced with Geokit/Postgres)</li>
+     	<li>HTML5 location detection</li>
+     	<li>Leaflet.js for the map</li>
+     </ul>
+	</section>
+
+	<section class="slide" id="map-icons">
+		<h2>Taco Joint Categories</h2>
+		<p>What kind of places have tacos?</p>
+		<table>
+			<tbody>
+				<tr>
+					<td width="50"><img src="public/bar.png" /></td>
+					<td width="50"><img src="public/bar-closed.png" /></td>
+					<td>Bars</td>
+				</tr>
+				<tr>
+					<td><img src="public/foodtruck.png" /></td>
+					<td><img src="public/foodtruck-closed.png" /></td>
+					<td>Food Trucks</td>
+				</tr>
+				<tr>
+					<td><img src="public/sit-down.png" /></td>
+					<td><img src="public/sit-down-closed.png" /></td>
+					<td>Sit Down Restaurant</td>
+				</tr>
+				<tr>
+					<td><img src="public/vegetarian.png" /></td>
+					<td><img src="public/vegetarian-closed.png" /></td>
+					<td>Vegetarian-friendly</td>
+				</tr>
+				<tr>
+					<td><img src="public/restaurant.png" /></td>
+					<td><img src="public/restaurant-closed.png" /></td>
+					<td>Other</td>
+				</tr>
+			</tbody>	
+		</table>
+		<p class="small">The map icons were grabbed from <a href="http://mapicons.nicolasmollet.com/">Nicolas Mollet's map icon library.</a></p>
+	</section>
+
+	<section class="slide map" id="map-1">
+		<h2>The Map</h2>
+		<img src="public/map2.png" />
+		<p>Initial map view, zoomed to your location.</p>
+	</section>
+
+	<section class="slide map" id="map-2">
+		<h2>The Map</h2>
+		<img src="public/map.png" />
+		<p>Map zoomed out with info bubble on a location.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Bugging My Friend for Design Assets</h2>
+		<img src="public/tacodelphia_mobile_loader.png" />
+		<p class="small">Designed by <a href="http://marshbank.net">Rob Marshbank</a>.</p>
+	</section>
+	
+	<section class="slide">
+		<h2>Responsive Layout</h2>
+		<img src="public/responsive-design.png" />
+	</section>
+
+	<section class="slide">
+		<h2>Interior Pages</h2>
+		<img src="public/interior-pages.png" />
+	</section>
 
 
-<!-- Begin extension snippets. Add or remove as needed. -->
 
-<!-- deck.navigation snippet -->
-<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+	<section class="slide" id="launch">
+		<h2>Launching</h2>
+		<ul>
+			<li>Development began March 2012</li>
+			<li>"Coming Soon" teaser was put in place</li>
+			<li>Quietly launched late June 2012</li>
+			<li>Thrillist Philadelphia noticed that we were live</li>
+		</ul>
+	</section>
 
-<!-- deck.status snippet -->
-<p class="deck-status">
-	<span class="deck-status-current"></span>
-	/
-	<span class="deck-status-total"></span>
-</p>
+	<section class="slide" id="thrillist-video">
+		<h2>Thrillist Made a Video</h2>
+		<center>
+			<embed 
+				type="application/x-shockwave-flash" 
+				src="http://www.thrillist.com/sites/all/modules/custom/thrillist_video/jwplayer/player.swf" 
+				quality="high" 
+				allowfullscreen="false" 
+				allowscriptaccess="always" 
+				allownetworking="all" 
+				height="360" 
+				width="640" 
+				wmode="transparent" 
+				flashvars="playlistfile=http://www.thrillist.com/jwplaylist/2847073/2846451&autostart=false&repeat=list&fullscreen=false&stretching=fill&logo.position=right&skin=http://www.thrillist.com/sites/all/modules/custom/thrillist_video/jwplayer/skins/beelden/beelden.xml&imgLftTtl=Village 
+				Belle&imgLftUrl=/eat/food-dining/2010/10/27/village-belle&imgLftImgUrl=http://www.thrillist.com/files/images/Philly_VillageBelle_Thumb.jpg&imgCtrTtl=City 
+				Tap 
+				House&imgCtrUrl=/eat/city-tap-house&imgCtrImgUrl=http://www.thrillist.com/files/images/Philly_Taphouse_Thumb.jpg&imgRgtTtl=Bubba's 
+				Texas 
+				BBQ&imgRgtUrl=/food/philadelphia/pa/19102/fishtown/bubbas-texas-bbq_bbq&imgRgtImgUrl=http://admin.thrillist.com/files/images/Philly_Bubbas_Thumb.jpg">
+		</center>
+	</section>
 
-<!-- deck.goto snippet -->
-<form action="." method="get" class="goto-form">
-	<label for="goto-slide">Go to slide:</label>
-	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-	<datalist id="goto-datalist"></datalist>
-	<input type="submit" value="Go">
-</form>
+	<section class="slide" id="press">
+		<h2>And Then a Little More Press</h2>
+		<!-- Technically Philly -->
+		<p><img src="public/technically-philly.jpeg" />
+		<a href="http://technicallyphilly.com/2012/07/09/tacodelphia-use-this-tool-to-find-tacos-all-over-philly">Tacodelphia: Use This Tool to Find Tacos All Over Philly</a></p>
 
-<!-- deck.hash snippet -->
-<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+		<!-- Grub Street -->
+		<p><img src="public/grub-street.jpeg" /><a href="http://philadelphia.grubstreet.com/2012/07/pure-tacos-opens-tacodelphia-launches.html">Pure Tacos Opens; Tacodelphia Launches</a></p>
 
-<!-- End extension snippets. -->
+		<!-- Zagat -->
+		<p><img src="public/zagat.jpeg" /><a href="http://blog.zagat.com/2012/07/tacodelphia-phillys-online-taco-search.html">Tacodelphia: Philly's Online Taco Search Tool</a></p>
+
+		<!-- Foobooz -->
+		<p><img src="public/foobooz.jpeg" /><a href="http://philadelphia.foobooz.com/2012/07/10/tacodelphia-launches/">Tacodelphia Launches</a></p>
+
+		<!-- Eater -->
+		<p><img src="public/eater.jpeg" /><a href="http://philly.eater.com/archives/2012/07/10/tacodelphia-locates-tacos-for-you-at-all-hours-of-the-day.php">Tacodelphia Locates Tacos For You at All Hours of the Day</a></p>
+
+	</section>
+
+<!-- 	<section class="slide">
+		<h2>In the future...</h2>
+		<li>The app has been extended to support multiple topics</li>
+		<li>For example:
+		<ul>
+
+			<li>Show the farmer's markets</li>
+			<li>Show the Philly Food Truck</li>
+		</ul>
+	</li>
+</ul>
+	</section> -->
+
+	<section class="slide title" id="closing-slide">
+		<h1>Thank You</h1>
+		<!-- <img class="stretch" src="public/PUG.jpeg" /> -->
+		<p>
+			Linus Graybill
+			</br>
+			graybill@gmail.com
+		</p>
+	</section>
+
+	<!-- End slides. -->
 
 
-<!-- Required JS files. -->
-<script src="jquery-1.7.2.min.js"></script>
-<script src="core/deck.core.js"></script>
+	<!-- Begin extension snippets. Add or remove as needed. -->
 
-<!-- Extension JS files. Add or remove as needed. -->
-<script src="core/deck.core.js"></script>
-<script src="extensions/hash/deck.hash.js"></script>
-<script src="extensions/menu/deck.menu.js"></script>
-<script src="extensions/goto/deck.goto.js"></script>
-<script src="extensions/status/deck.status.js"></script>
-<script src="extensions/navigation/deck.navigation.js"></script>
-<script src="extensions/scale/deck.scale.js"></script>
+	<!-- deck.navigation snippet -->
+	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
 
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-<script>
-	$(function() {
-		$.deck('.slide');
-	});
-</script>
+	<!-- deck.status snippet -->
+	<p class="deck-status">
+		<span class="deck-status-current"></span>
+		/
+		<span class="deck-status-total"></span>
+	</p>
+
+	<!-- deck.goto snippet -->
+	<form action="." method="get" class="goto-form">
+		<label for="goto-slide">Go to slide:</label>
+		<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+		<datalist id="goto-datalist"></datalist>
+		<input type="submit" value="Go">
+	</form>
+
+	<!-- deck.hash snippet -->
+	<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+	<!-- End extension snippets. -->
+
+
+	<!-- Required JS files. -->
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="core/deck.core.js"></script>
+
+	<!-- Extension JS files. Add or remove as needed. -->
+	<script src="core/deck.core.js"></script>
+	<script src="extensions/hash/deck.hash.js"></script>
+	<script src="extensions/menu/deck.menu.js"></script>
+	<script src="extensions/goto/deck.goto.js"></script>
+	<script src="extensions/status/deck.status.js"></script>
+	<script src="extensions/navigation/deck.navigation.js"></script>
+	<script src="extensions/scale/deck.scale.js"></script>
+
+	<!-- Initialize the deck. You can put this in an external file if desired. -->
+	<script>
+		$(function() {
+			$.deck('.slide');
+		});
+	</script>
 </body>
 </html>
